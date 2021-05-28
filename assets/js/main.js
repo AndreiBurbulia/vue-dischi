@@ -1,7 +1,7 @@
 const app = new Vue({
     el: "#app",
     data: {
-        dischi: [],
+        dischi: "",
     },
     methods: {
 
@@ -10,7 +10,7 @@ const app = new Vue({
     mounted() {
         axios.get("https://flynn.boolean.careers/exercises/api/array/music")
             .then(response => {
-                this.dischi.push(response.data.response)
+                this.dischi = response.data.response;
                 console.log(this.dischi);
             })
 
