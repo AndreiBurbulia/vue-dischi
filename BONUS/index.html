@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Dischi</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <img src="./assets/img/logo.png" alt="">
+        </header>
+        <div class="selectForm">
+
+            <select v-model="valoreSelect" @change="genreSelection">
+                <option value="all">All</option>
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="jazz">Jazz</option>
+                <option value="metal">Metal</option>
+            </select>
+        </div>
+        <section class="card_container">
+
+            <div class="card" v-for="disco in filteredList">
+                <img :src="disco.poster" alt="">
+                <h2>{{disco.title}}</h2>
+                <div>
+                    <p>{{disco.author}}</p>
+                    <p>{{disco.year}}</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <!-- CDN VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- CDN AXIOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- My script -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
