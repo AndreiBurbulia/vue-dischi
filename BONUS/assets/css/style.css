@@ -32,12 +32,13 @@ header img{
     justify-content: center;
     background-color: #1E2D3B;
     padding-top: 7rem;
+    min-height: 90vh;
 }
 
 .card{
     background-color: #2E3A46;
-    width: 14%;
-    min-height: 400px;
+    width: 300px;
+    height: 500px;
     padding: 1rem;
     margin: 1rem;
     display: flex;
@@ -46,14 +47,14 @@ header img{
 }
 
 .card img{
-    height: 220px;
+    width: 250px;
     object-fit: cover;
     margin-bottom: 2rem;
 }
 
 .card h2{
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     max-width: 80%;
     text-align: center;
 }
