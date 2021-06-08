@@ -3,6 +3,7 @@ const app = new Vue({
     data: {
         dischi: "",
         valoreSelect: "all",
+        error: null,
     },
     methods: {
 
@@ -13,7 +14,10 @@ const app = new Vue({
             .then(response => {
                 this.dischi = response.data.response;
                 this.dischi = this.dischi.sort((a, b) => b.year - a.year);
-
+            })
+            .catch(e => {
+                console.error(e);
+                this.error = " Sorry could not connect to the API" + e
             });
 
 

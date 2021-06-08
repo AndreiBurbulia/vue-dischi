@@ -50,6 +50,7 @@ header img{
 
 .card img{
     width: 250px;
+    height: 250px;
     object-fit: cover;
     margin-bottom: 2rem;
 }
@@ -59,6 +60,7 @@ header img{
     margin-bottom: 2rem;
     max-width: 80%;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .card> div p{
